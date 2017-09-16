@@ -3,7 +3,6 @@ package com.example.android.miwok;
 import android.app.Activity;
 
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +28,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         super(context, 0, words);
         mColorResourceId = colorResourceId;
     }
-
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -68,15 +66,12 @@ public class WordAdapter extends ArrayAdapter<Word> {
             iconView.setVisibility(View.GONE);
         }
 
-        // Set Background color
+        // Set background Color with App activity context
         View text_container = listItemView.findViewById(R.id.text_container);
-
-
-        // Set Color with App activity context
-        // ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
+
         text_container.setBackgroundColor(color);
-        // ||||||||||||||||||||||||||||||||}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
         return listItemView;
     }
 

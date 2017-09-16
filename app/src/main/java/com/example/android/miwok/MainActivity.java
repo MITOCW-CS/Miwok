@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Family category handle
-
         TextView family = (TextView) findViewById(R.id.family);
         family.setOnClickListener(new View.OnClickListener() {
             @Override
